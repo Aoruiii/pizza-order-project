@@ -5,6 +5,7 @@ import {
   formatCurrency,
   formatDate,
 } from "../../utils/helpers";
+import SearchOrder from "./SearchOrder";
 import { getOrder } from "../../services/apiRestaurant";
 import { useLoaderData, useParams } from "react-router";
 import { useEffect, useState } from "react";
@@ -44,8 +45,37 @@ import { useEffect, useState } from "react";
 //   priorityPrice: 19,
 // };
 
+const initialState = {
+  id: null,
+  status: "",
+  priority: "",
+  priorityPrice: 0,
+  orderPrice: 0,
+  estimatedDelivery: "2027-04-25T10:00:00",
+  cart: [],
+};
+
 function Order() {
-  const order = useLoaderData();
+  const [order, setOrder] = useState(initialState);
+  const { orderId } = useParams();
+
+  useEffect(
+    function () {
+      async function searchOrder() {
+        try {
+          const order = await getOrder(orderId);
+          console.log(order);
+          setOrder(order);
+        } catch (error) {
+          console.log(error.message);
+        }
+      }
+      searchOrder();
+    },
+    [orderId]
+  );
+
+  // const order = useLoaderData();
   // Everyone can search for all orders, so for privacy reasons we're gonna exclude names or address, these are only for the restaurant staff
   const {
     id,
@@ -60,6 +90,7 @@ function Order() {
 
   return (
     <div>
+      <SearchOrder />
       <div>
         <h2>Status</h2>
 
@@ -87,9 +118,10 @@ function Order() {
   );
 }
 
-export async function loader({ params }) {
-  const order = await getOrder(params.orderId);
-  return order;
-}
+// export async function loader() {
+//   const orderId = useParams();
+//   const order = await getOrder(orderId);
+//   return order;
+// }
 
 export default Order;
