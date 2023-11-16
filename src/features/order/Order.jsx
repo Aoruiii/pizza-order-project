@@ -9,6 +9,8 @@ import { getOrder } from "../../services/apiRestaurant";
 import { useLoaderData, useParams } from "react-router";
 import { useEffect, useState } from "react";
 import OrderItem from "./OrderItem";
+import { useFetcher } from "react-router-dom";
+import UpdateOrderButton from "./UpdateOrderButton";
 
 // const order = {
 //   id: "ABCDEF",
@@ -59,6 +61,15 @@ function Order() {
   } = order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
+  const fetcher = useFetcher();
+
+  useEffect(
+    function () {
+      if (!fetcher.data && fetcher.state === "idle") fetcher.load("/menu");
+    },
+    [fetcher],
+  );
+
   return (
     <div className="space-y-8 px-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
@@ -88,7 +99,15 @@ function Order() {
       </div>
       <ul className="divide-y divide-stone-200 border-y">
         {cart.map((item) => (
-          <OrderItem item={item} key={item.pizzaId} />
+          <OrderItem
+            item={item}
+            key={item.pizzaId}
+            ingredients={
+              fetcher?.data?.find((pizza) => pizza.id === item.pizzaId)
+                ?.ingredients
+            }
+            isLoadingIngredients={fetcher.state === "loading"}
+          />
         ))}
       </ul>
 
@@ -105,6 +124,8 @@ function Order() {
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
+
+      {!priority && <UpdateOrderButton order={order} />}
     </div>
   );
 }
