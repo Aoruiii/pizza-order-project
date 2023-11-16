@@ -32,13 +32,13 @@ This is a Single-Page Appication(SPA) based on REACT, Javascript, JSX, HTML and 
 
 ## Features
 
-1. User
+### 1. User
    1.1 User can provide their info to start
 <div align="center">
 <img src="Screenshot 2023-11-16 at 10.54.21 am.png" alt="Mac" style="text-align: center;" height="500"/>
 </div>
 
-2. Menu
+### 2. Menu
    2.1 User can view menu
    2.2 User can add items to the cart
    2.2 User can change the quantity of their item
@@ -49,7 +49,7 @@ This is a Single-Page Appication(SPA) based on REACT, Javascript, JSX, HTML and 
 <img src="Screenshot 2023-11-16 at 10.55.30 am.png" alt="Mac" style="text-align: center;" height="500"/>
 </div>
 
-3. Cart
+### 3. Cart
    3.1 User can view cart with their selected items
    3.2 User can change the quantity of items
    3.3 User can delete items from cart
@@ -60,7 +60,8 @@ This is a Single-Page Appication(SPA) based on REACT, Javascript, JSX, HTML and 
 <div align="center">
 <img src="Screenshot 2023-11-16 at 10.56.00 am.png" alt="Mac" style="text-align: center;" height="500"/>
 </div>
-4. Order
+
+### 4. Order
    4.1 User can input name, phone and address for the order
    4.2 Default name is filled for the user
    4.3 User can get their current location for the address
@@ -74,7 +75,7 @@ This is a Single-Page Appication(SPA) based on REACT, Javascript, JSX, HTML and 
 <img src="Screenshot 2023-11-16 at 11.31.07 am.png" alt="Mac" style="text-align: center;" height="500"/>
 </div>
 
-5. iPhone View (Responsive web app)
+### 5. iPhone View (Responsive web app)
 <div align="center">
 <img src="Screenshot 2023-11-16 at 11.16.11 am.png" alt="iPhone" style="text-align: center;" height="400"/>
 <img src="Screenshot 2023-11-16 at 11.19.31 am.png" alt="iPhone" style="text-align: center;" height="400"/>
