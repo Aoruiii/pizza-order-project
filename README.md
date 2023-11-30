@@ -83,11 +83,11 @@ This is a Single-Page Appication(SPA) based on REACT, Javascript, JSX, HTML and 
 ### 5. iPhone View (Responsive web app)
 
 <div align="center">
-<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.16.11 am.png" alt="iPhone" style="text-align: center;" height="400"/>
-<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.19.31 am.png" alt="iPhone" style="text-align: center;" height="400"/>
-<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.02.14 am.png" alt="iPhone" style="text-align: center;" height="400"/>
-<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.02.50 am.png" alt="iPhone" style="text-align: center;" height="400"/>
-<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.03.11 am.png" alt="iPhone" style="text-align: center;" height="400"/>
+<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.16.11 am.png" alt="iPhone" style="text-align: center;" height="350"/>
+<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.19.31 am.png" alt="iPhone" style="text-align: center;" height="350"/>
+<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.02.14 am.png" alt="iPhone" style="text-align: center;" height="350"/>
+<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.02.50 am.png" alt="iPhone" style="text-align: center;" height="350"/>
+<img src="public/screenshots-readme/Screenshot 2023-11-16 at 11.03.11 am.png" alt="iPhone" style="text-align: center;" height="350"/>
 </div>
 
 ## Source Code:
